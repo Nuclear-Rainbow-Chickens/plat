@@ -1,15 +1,21 @@
 ﻿#pragma strict
-var speed : float;
 var jumpheight : float;
+var touchingground = false;
+var direction = 0;
+var gravity : float;
 function Start () {
-
+	Physics.gravity = Vector3(0,-gravity * 100,0);
 }
 
 function Update () {
-	transform.position += Vector3(0,0,Input.GetAxis("Vertical") / speed);
-	if(Input.GetKeyDown(KeyCode.Space)) {
-		if(transform.position.y < 2.5) {
-			transform.position.y += jumpheight;
-		}
+	if((Input.GetKeyDown(KeyCode.Space)) && (touchingground == true)) {
+		 rigidbody.AddForce(Vector3.up * jumpheight * 2000);
+		 touchingground = false;
+	}
+}
+function OnCollisionEnter(floor : Collision) {
+	if(floor.collider.gameObject.tag == "ground") {	
+		touchingground = true;
+		return;
 	}
 }
