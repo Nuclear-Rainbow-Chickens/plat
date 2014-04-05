@@ -2,14 +2,12 @@
 var speed : float;
 var playerobj : GameObject;
 var playertrans : Transform;
+var sync = false;
 function Start () {
-
+	
 }
 
 function Update () {
 	rigidbody.AddForce(playertrans.transform.forward * Input.GetAxis("Vertical") * speed * 10);
 	transform.RotateAround(playertrans.position,Vector3.up,Input.GetAxis("Horizontal"));
-	if(playerobj.rigidbody.velocity != rigidbody.velocity) {
-		rigidbody.velocity = playerobj.rigidbody.velocity;
-	}
 }
