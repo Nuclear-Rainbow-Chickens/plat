@@ -1,20 +1,16 @@
 ﻿#pragma strict
-var sync = false;
 var playerobj : GameObject;
 var playertrans : Transform;
+var selfvelocity : Vector3;
+var othervelocity : Vector3;
 function Start () {
+	
 }
 
 function Update () {
-if(playerobj.rigidbody.velocity != rigidbody.velocity) {
-		rigidbody.velocity = playerobj.rigidbody.velocity;
-		sync = true;
+	if((playertrans.position.y > (transform.position.y - 2.5)) && (playerobj.GetComponent(Player).touchingground == true)) {
+		transform.position.y += 0.5;
 	}
-	else if(playerobj.rigidbody.velocity == rigidbody.velocity) {
-		sync = false;
-	}
-if(Vector3.Distance(playertrans.position,transform.position) < 2) {
-	rigidbody.velocity = Vector3.zero;
-	sync = true;
-}
+	selfvelocity = rigidbody.velocity;
+	othervelocity = playerobj.GetComponent(Player).playervelocity;
 }
