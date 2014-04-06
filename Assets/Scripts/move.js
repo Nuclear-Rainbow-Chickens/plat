@@ -2,7 +2,6 @@
 var speed : float;
 var playerobj : GameObject;
 var playertrans : Transform;
-var sync = false;
 function Start () {
 	
 }
