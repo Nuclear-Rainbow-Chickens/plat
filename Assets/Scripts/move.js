@@ -6,7 +6,7 @@ function Start () {
 
 }
 
-function Update () {
+function FixedUpdate () {
 	rigidbody.velocity += (playertrans.transform.forward * Input.GetAxis("Vertical") * speed / 10);
 	transform.RotateAround(playertrans.position,Vector3.up,Input.GetAxis("Horizontal"));
 }
