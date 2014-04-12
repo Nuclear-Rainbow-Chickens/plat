@@ -32,7 +32,7 @@ function FixedUpdate () {
 		rigidbody.velocity = Vector3.zero;
 	}
 	playervel = playerobj.rigidbody.velocity;
-	transform.RotateAround(playertrans.position,Vector3.up,Input.GetAxis("Horizontal"));
+	transform.RotateAround(playertrans.position,Vector3.up,Input.GetAxis("Horizontal") * 1);
 	rigidbody.velocity.y = 0;
 	fps = 1.0/Time.deltaTime;
 }

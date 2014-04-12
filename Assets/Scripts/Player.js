@@ -10,10 +10,12 @@ function Start () {
 
 function FixedUpdate () {
 	if((Input.GetKeyDown(KeyCode.Space)) && (touchingground <= 1)) {
-		 rigidbody.AddForce(Vector3.up * jumpheight * 2000);
+		 rigidbody.AddForce(Vector3.up * jumpheight);
 		 touchingground += 1;
 	}
-	playervelocity = rigidbody.velocity;
+	if(transform.position.y <= 0 ) {
+		transform.position.y += 0.01;
+	}
 }
 function OnCollisionEnter(floor : Collision) {
 	if(floor.collider.gameObject.tag == "ground") {	
