@@ -1,11 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\sync.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Restart.js">
     <Files>
-      <File FileName="Assets\Scripts\sync.js" Line="38" Column="2" />
-      <File FileName="Assets\Scripts\sync.js" Line="25" Column="4" />
+      <File FileName="Assets\Scripts\Restart.js" Line="9" Column="33" />
       <File FileName="Assets\Scripts\Player.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\cam.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\move.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
