@@ -14,6 +14,8 @@ function Update () {
 	}
 	if((rigidbody.velocity.y > -81) && (restart == true)) {
 		rigidbody.velocity.y = max_vel * -1;
+		rigidbody.velocity.x = 0;
+		rigidbody.velocity.z = 0;
 	}
 }
 function OnCollisionEnter(floor : Collision) {
