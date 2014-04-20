@@ -10,20 +10,31 @@ function Start () {
 
 function Update () {
 	if(transform.position.y < -20) {
-		transform.position = Vector3(firstpos.x,100,firstpos.z);
-		rigidbody.velocity = Vector3.zero;
-		transform.rotation = firstrot;
-		restart = true;
+		restarttrans();
 	}
 	if((rigidbody.velocity.y > -81) && (restart == true)) {
-		rigidbody.velocity.y = max_vel * -1;
-		rigidbody.velocity.x = 0;
-		rigidbody.velocity.z = 0;
+		restartvel();
 	}
 }
-function OnCollisionEnter(floor : Collision) {
-	if(floor.collider.gameObject.tag == "ground") {	
+function OnCollisionEnter(bam : Collision) {
+	if(bam.collider.gameObject.tag == "ground") {	
 		restart = false;
 		return;
 	}
+	else if(bam.collider.gameObject.tag == "enemy") {
+		restarttrans();
+	}
+}
+function restarttrans(){
+	transform.position = Vector3(firstpos.x,100,firstpos.z);
+	rigidbody.velocity = Vector3.zero;
+	transform.rotation = firstrot;
+	restart = true;
+	return;
+}
+function restartvel() {
+	rigidbody.velocity.y = max_vel * -1;
+	rigidbody.velocity.x = 0;
+	rigidbody.velocity.z = 0;
+	return;
 }

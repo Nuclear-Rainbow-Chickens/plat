@@ -9,7 +9,7 @@ function Start () {
 }
 
 function FixedUpdate () {
-	if((Input.GetKeyDown(KeyCode.Space)) && (touchingground <= 1)) {
+	if((Input.GetKeyDown(KeyCode.Space)) && (touchingground < 2)) {
 		 rigidbody.AddForce(Vector3.up * jumpheight * 2000);
 		 touchingground += 1;
 	}
