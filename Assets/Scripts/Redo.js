@@ -3,6 +3,7 @@ var firstpos : Vector3;
 var firstrot : Quaternion;
 var restart = false;
 var max_vel : float;
+var playerobj : GameObject;
 function Start () {
 	firstpos = transform.position;
 	firstrot = transform.rotation;
@@ -29,6 +30,7 @@ function restarttrans(){
 	transform.position = Vector3(firstpos.x,100,firstpos.z);
 	rigidbody.velocity = Vector3.zero;
 	transform.rotation = firstrot;
+	playerobj.GetComponent(PlayerHealth).lives -= 1;
 	restart = true;
 	return;
 }

@@ -1,15 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemy.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Points.js">
     <Files>
-      <File FileName="Assets\Scripts\Redo.js" Line="26" Column="3" />
-      <File FileName="Assets\Scripts\Bullet.js" Line="4" Column="1" />
+      <File FileName="Assets\Scripts\Coin.js" Line="9" Column="13" />
+      <File FileName="Assets\Scripts\Enemy.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Redo.js" Line="33" Column="49" />
+      <File FileName="Assets\Scripts\Bullet.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Shoot.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Redo.js" Line="40" Column="2" />
-      <File FileName="Assets\Scripts\Enemy.js" Line="32" Column="2" />
+      <File FileName="Assets\Scripts\Player.js" Line="19" Column="1" />
       <File FileName="Assets\Scripts\PlayerHealth.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GUIHealth.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Points.js" Line="13" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
